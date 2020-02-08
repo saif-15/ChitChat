@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_background"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.NoActionBar">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="25dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/sign_up_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Sign Up"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_edittext"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/sign_up_text"
+                android:layout_marginBottom="5dp"
+                android:hint="First Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastname_edittext"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/name_edittext"
+                android:layout_marginBottom="5dp"
+                android:hint="Last name">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Email_edittext"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lastname_edittext"
+                android:layout_marginBottom="5dp"
+                android:hint="Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/day_spinner"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/Email_edittext"
+                android:background="@drawable/spinner_state"
+                android:hint="Day" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/month_spinner"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/Email_edittext"
+                android:layout_toEndOf="@id/day_spinner"
+                android:background="@drawable/spinner_state"
+                android:hint="Month" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/year_spinner"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/Email_edittext"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/month_spinner"
+                android:background="@drawable/spinner_state"
+                android:hint="Month" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Password_edittext"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/day_spinner"
+                android:layout_marginBottom="5dp"
+                android:hint="Password"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:inputType="textPassword" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirm_Password_edittext"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/Password_edittext"
+                android:layout_marginBottom="5dp"
+                android:hint="Confirm Password"
+                app:endIconMode="password_toggle"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:inputType="textPassword" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <net.igenius.customcheckbox.CustomCheckBox
+                android:id="@+id/rb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/confirm_Password_edittext"
+                android:layout_margin="20dp" />
+
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rb"
+                android:background="@drawable/btn2_background"
+                android:fontFamily="@font/raleway"
+                android:text="Sign Up"
+
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold">
+
+            </Button>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_up_button"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Already have an account?"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Sign in"
+                    android:textColor="@color/bright_blue"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

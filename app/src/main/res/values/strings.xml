@@ -3,4 +3,15 @@
     <string name="welcome">Welcome To ChitChat</string>
     <string name="welcome_detail">ChitChat is a social networking platform where you can
      connect with your friends and family</string>
+
+    <integer-array name="day">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
 </resources>

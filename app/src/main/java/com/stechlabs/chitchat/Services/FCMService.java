@@ -1,4 +1,4 @@
-package com.stechlabs.chitchat;
+package com.stechlabs.chitchat.Services;
 import android.app.NotificationManager;
 import android.util.Log;
 
@@ -7,6 +7,8 @@ import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.stechlabs.chitchat.App;
+import com.stechlabs.chitchat.R;
 
 public class FCMService extends FirebaseMessagingService {
 
@@ -20,7 +22,7 @@ public class FCMService extends FirebaseMessagingService {
 
             String title=remoteMessage.getNotification().getTitle();
             String body=remoteMessage.getNotification().getBody();
-            NotificationCompat.Builder notification=new NotificationCompat.Builder(this,App.CHANNEL_ID)
+            NotificationCompat.Builder notification=new NotificationCompat.Builder(this, App.CHANNEL_ID)
                     .setContentTitle(title)
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentText(body);
